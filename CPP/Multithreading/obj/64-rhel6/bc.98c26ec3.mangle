@@ -1,0 +1,11 @@
+-B/home/dev/build/tools/clang-5.0.0/bin
+-DNDEBUG
+-DNO_LOG4CXX
+-Iinclude
+-m64 -g -O3 -march=core2 -fPIC
+-pthread
+-rdynamic
+-std=c++14
+1
+dt4
+rhel6

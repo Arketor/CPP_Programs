@@ -1,0 +1,21 @@
+ProjectName = "ns"
+ProjectVersion = "1.0.0"
+ProjectHeaders = [
+    "factorial.h"
+]
+
+[nt]
+    Type = "Binary"
+    Sources = ["normalexecution.cxx"]
+    Deps.External = [
+        "boost"
+    ]
+
+[getfact]
+    Type = "StaticLibrary"
+    Export = "True"
+    Output = "lib_get_fact.a"
+    Sources = ["factorial.cxx"]
+    Deps.External = [
+        "boost"
+    ] 

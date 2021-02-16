@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+using namespace std;
+class abc
+{
+    int a,b,*c;
+    public:
+    abc():a(0),b(0),c(new int(0)){}
+    //abc(int x,int y,int z):a(x),b(y),c(new int(z)){}
+
+    abc(int x,int y,int z)
+    {
+        a=x;
+        b=y;
+        c=new int(z);
+    }
+
+    abc(abc &o)
+    {
+        a=o.a;
+        b=o.b;
+        c=new int(*o.c);
+    }
+    ~abc()
+    {
+        cout<<"I am also there\n";
+    }
+    void show();
+    void getd(int z)
+    {
+        *c=z;
+    }
+    void operator=(abc &o)
+    {
+        a=o.a;
+        b=o.b;
+        *c=*o.c;
+        a++;
+        (o.a)++;
+    }
+    
+};
+void abc::show()
+{
+    cout<<a<<" "<<b<<" "<<*c<<"\n";
+}
+int main()
+{
+    abc o1,o2(11,21,31);
+    cout<<"Assignment Operator\n";
+    o1.show();
+    o2.show();
+    o1=o2;
+    o1.show();
+    o2.show();
+    cout<<"Hi\n";
+    o2.getd(41);
+    o1.show();
+    o2.show();
+    cout<<"Copy Constructor\n";
+    abc o4(1,2,3);
+    o4.show();
+    abc o3=o4;
+    o3.show();
+    o4.show();
+    cout<<"Hi\n";
+    o4.getd(4);
+    o3.show();
+    o4.show();
+    return 0;
+}

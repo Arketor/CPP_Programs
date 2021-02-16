@@ -1,0 +1,111 @@
+#include<bits/stdc++.h>
+using namespace std;
+1
+1234
+3
+//Pull Requests from Frontend
+2
+4
+12
+class shape
+{
+    protected:
+    int a,b,c;
+    public:
+    virtual void getdetails()=0;
+    virtual int area()=0;
+    virtual int parameter()=0;
+};
+
+class circle:public shape
+{
+    public:
+    void getdetails()
+    {
+    //cout<<"Enter Radius ";
+    cin>>a;
+    }
+    int area()
+    {
+        return 3.14*a*a;
+    }
+    int parameter()
+    {
+        return 2*3.14*a;
+    }
+};
+class triangle:public shape
+{
+    public:
+    void getdetails()
+    {
+    //cout<<"Enter sides of triangle ";
+    cin>>a>>b>>c;
+    }
+    int area()
+    {
+        
+        return 0.5*a*b;
+    }
+    int parameter()
+    {
+        return a+b+c;
+    }
+};
+class rectangle:public shape
+{
+    public:
+    void getdetails()
+    {
+    //cout<<"Enter length and breadth ";
+    cin>>a>>b;
+    }
+    int area()
+    {
+        return a*b;
+    }
+    int parameter()
+    {
+        return 2*(a+b);
+    }
+};
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        string s;
+        //cout<<"Enter shape ";
+        cin>>s;
+        shape *a=NULL;
+        if(s=="Circle")
+        {
+            circle *b=new circle;
+           // cout<<"Circle";
+            a=b;
+        }
+        else
+        if(s=="Rectangle")
+        {
+            rectangle *b=new rectangle;
+            a=b;
+        }
+        else
+        {
+            triangle *b;
+            a=b;
+        }
+        
+        a->getdetails();
+            cout<<"Area : "<<a->area()<<"\n";
+            cout<<"Parameter : "<<a->parameter()<<"\n";
+
+        
+        
+//Hey writing this comment from CLI        
+        
+    }
+    return 0;
+}

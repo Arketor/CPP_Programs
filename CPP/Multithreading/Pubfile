@@ -1,0 +1,12 @@
+Modules
+{
+boost
+}
+bc
+{
+Binary{mt}
+Sources
+{
+mt_vs_normalexecution.cpp
+}
+}

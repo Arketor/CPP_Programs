@@ -1,0 +1,91 @@
+Class - Blueprint of a datatype. Simply it means a datatype only(user defined datatype) which can
+store type of data as specified in its definition.
+
+eg : Below is a datatype which can store an integer and a string
+class abc
+{
+    int a;
+    string k;
+};
+
+
+                                                           Notes:
+
+1. Class members are Private by default whereas in Struct they are Public
+2. Constructor is always declared in Public Section
+3. If no constructor is made by us, then Compiler will create two constructors: Default Constructor and Copy Constructor
+4. If we make any constructor then Compiler will not make default constructor for us
+5. If we make any constructor but not a copy constructor, then only copy constructor will be made by Compiler.
+6. If we make Copy Constructor then no constructor will be made by Compiler
+7. Examples showing different ways to define a constructor:
+    class abc
+    {
+	    int a,b;
+	    string c,d;
+	    public:
+        abc(int x,int y)              Or                 abc(int x,int y): a(x), b(y){}     
+	    {
+		    a=x;
+		    b=y;
+	    }
+    };
+   
+8. Examples showing different ways to define an object (Suppose class name is abc):
+   
+   abc o0;                  // Zero Argument
+   abc o1=abc();            // Zero Argument
+   abc o2(4);               // Single Argument
+   abc o3=4;                // Single Argument     This type is only for constructors with single argument
+   abc o4=abc(4);           // Single Argument
+   abc o5(1,2);             // Double Argument
+   abc o6 =abc(1,2);        // Double Argument
+   
+   
+
+Sample Code : 
+
+#include<bits/stdc++.h>
+using namespace std;
+class abc
+{
+    int a,b;
+    public:
+    abc():a(10),b(20) // Or We can write this part as abc(){a=10;b=20;cout<<"Constructor\n";} i.e in a normal way
+    {
+        cout<<"Constructor\n";
+    }
+    abc(int k,int l):a(k),b(l)
+    {
+        cout<<"Parameterised Constructor\n";
+    }
+    void get(int,int);
+    ~abc();
+    void show()
+    {
+        cout<<a<<" "<<b<<endl;
+    }
+};
+abc::~abc()
+{
+    cout<<"Destructor\n";
+}
+void abc::get(int k,int l)
+{
+    a=k;
+    b=l;
+}
+int main()
+{
+    abc o1;
+    o1.get(3,5);
+    o1.show();
+    abc o2;
+    o2.show();
+    abc o3(13,3113);
+    o3.show();
+    return 0;
+}
+   
+   
+
+

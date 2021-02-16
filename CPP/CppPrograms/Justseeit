@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+class abc
+{
+    public:
+    abc()
+    {
+        cout<<"ads\n";
+    }
+    abc(int a)
+    {
+        cout<<a*a<<endl;
+    }
+};
+abc fun()
+{
+    return abc();
+}
+int main()
+{
+    abc k=fun();
+    abc d;
+    abc e=abc();
+    abc f(10);
+    abc g=abc(12);
+    return 0;
+}

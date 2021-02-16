@@ -1,0 +1,51 @@
+                                // Normal Functions with default parameters : 
+
+//Type 1 - No Separate Declaration
+#include<bits/stdc++.h>
+using namespace std;
+int f(int a,int b,int c=0)
+{
+    return a+b+c;
+}
+int main()
+{
+    cout<<f(1,2);
+    return 0;
+}
+
+//Type 2 - Separate Declaration and Definition
+#include<bits/stdc++.h>
+using namespace std;
+int f(int,int,int=0);
+int main()
+{
+    cout<<f(1,2);
+    return 0;
+}
+int f(int a,int b,int c)
+{
+    return a+b+c;
+}
+
+                                Advantages of Function - Memory Saving (when Functions are called then only memory is allocated for it), Easy
+                                Read, Easy Modify, Easy Debug, Avoids rewriting of same code so saves time to write again and size of code file is also less(i.e takes less KBs).
+                                //Inline Function - Functions are used for saving memory, as when they are called then only memory is used
+                                but calling function takes time also(Loading function to stack and other tasks takes time). But for large functions Memory Factor is more important than Time Factor. And
+                                for small functions time factor is more significant than memory factor because memory consumed in small functions would be less.
+                                So Inline just reduces the task of Function Calling by replacing the function call at Compile time with its definition 
+                                code. So it reduces time to call a function but yeah function's definition is pasted at all places where it is called.
+                                Inline -> request to compiler
+                                Inline->One line functions
+                                
+#include<bits/stdc++.h>
+using namespace std;
+inline int f(int a,int b,int c)
+{
+    return a+b+c;
+}
+int main()
+{
+    cout<<f(2,4,3);
+    return 0;
+}
+

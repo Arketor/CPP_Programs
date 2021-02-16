@@ -1,0 +1,9 @@
+ProjectName = "teststaticlib"
+ProjectVersion = "1.0.0"
+[nat]
+    Type = "Binary"
+    Sources = ["a1.cxx"]
+    Deps.External = [
+        "boost",
+        "ns"
+    ]

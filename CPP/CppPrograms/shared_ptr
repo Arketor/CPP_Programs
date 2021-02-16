@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+using namespace std;
+//Hello yeah
+class comp
+{
+  int r,i;
+  public:
+  comp()
+  {
+      cout<<"Constructor Called\n";
+  }
+  ~comp()
+  {
+      cout<<"Destructor Called\n";
+  }
+  
+  void getd(int a,int b)
+  {
+      r=a;
+      i=b;
+  }
+  void showd()
+  {
+      cout<<r<<"+"<<i<<"j"<<endl;
+  }
+};
+/*template<typename t>
+t add(t a,t b)
+{
+    return a+b;
+}
+template <> 
+comp add(comp a,comp b) 
+{ 
+    comp c;
+    c.r=a.r+b.r;
+    c.i=a.i+b.i;
+    return c;
+}*/
+int main()
+{
+    //cout<<add(2,41)<<endl;
+    {comp a,b;
+    a.getd(1,2);
+    b.getd(3,4);
+    a.showd();
+    b.showd();
+    }
+    shared_ptr<comp> pt1;
+    {
+    shared_ptr<comp> pt2;
+    
+    {
+    //comp *c=new comp;
+    shared_ptr<comp> c(new comp);
+    c->getd(5,6);
+    c->showd();
+    pt2 = c;
+    pt1=pt2;
+    }
+    
+   
+  cout<<"Hi\n";
+    }
+    cout<<"Out\n";
+   /* {
+    //comp *c=new comp;
+    shared_ptr<comp> c(new comp);
+    c->getd(5,6);
+    c->showd();
+    }*/
+    
+   // cout<<add<comp>(a,b)<<endl;
+}

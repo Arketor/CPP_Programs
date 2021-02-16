@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+class abc
+{
+    int a,b,*c;
+    public:
+    abc():a(0),b(0),c(new int(0)){}
+    //abc(int x,int y,int z):a(x),b(y),c(new int(z)){}
+
+    abc(int x,int y,int z)
+    {
+        a=x;
+        b=y;
+        c=new int(z);
+    }
+    ~abc()
+    {
+        cout<<"I am also there "<<a<<"\n";
+    }
+    
+    void show();
+    void getd(int z)
+    {
+        *c=z;
+    }
+    void operator=(abc o)
+    {
+        a=o.a;
+        b=o.b;
+        *c=*(o.c);
+    }
+    friend abc& operator+(abc o1,abc o2)
+    {
+        abc o;
+        o.a=o1.a+o2.a;
+        o.b=o1.b+o2.b;
+        *(o.c)=*(o1.c)+(*(o2.c));
+        abc &oo=o;
+        return oo;
+    }
+    friend ostream& operator<<(ostream &dout,abc o)
+    {
+        dout<<"Hi "<<o.a<<" "<<o.b<<endl;
+        return dout;
+    }
+};
+void abc::show()
+{
+    cout<<a<<" "<<b<<" "<<*c<<"\n";
+}
+int main()
+{
+    abc o1(1,21,31),o2(2,12,3);
+    abc o3=o1+o2;
+    o3.show();
+    cout<<o1<<o2<<o3;
+    return 0;
+//Hello
+}
