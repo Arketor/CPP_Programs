@@ -1,0 +1,19 @@
+int main()
+    We cannot define Main Function in a namespace. It has to be in Global Namespace i.e :: 
+    So main function is actually ::main()
+    Below example will throw compilation error
+  
+    #include <iostream>
+    using namespace std;
+    namespace fds
+    {
+        int a=1;
+        int main()
+        {
+            cout<<a;
+            return 0;
+        }
+    }
+  
+ 
+ 
