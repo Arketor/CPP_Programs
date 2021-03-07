@@ -34,11 +34,12 @@ class abc
    
    abc o0;                  // Zero Argument
    abc o1=abc();            // Zero Argument
-   abc o2(4);               // Single Argument
-   abc o3=4;                // Single Argument     This type is only for constructors with single argument
-   abc o4=abc(4);           // Single Argument
-   abc o5(1,2);             // Double Argument
-   abc o6 =abc(1,2);        // Double Argument
+   abc o2();                // Not an object, it is a function with return type abc
+   abc o3(4);               // Single Argument
+   abc o4=4;                // Single Argument     This type is only for constructors with single argument
+   abc o5=abc(4);           // Single Argument
+   abc o6(1,2);             // Double Argument
+   abc o7 =abc(1,2);        // Double Argument
    
    
 
