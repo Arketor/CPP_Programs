@@ -1,3 +1,5 @@
+1st Program
+
 #include <iostream>
 using namespace std;
 
@@ -21,4 +23,54 @@ catch (char x ) {
 }
 cout << "After catch (Will be executed) \n";
 return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+2nd Program
+
+#include<iostream>
+using namespace std;
+
+void fun2(int k)
+{
+    try{
+        if(k>10)
+        throw k;
+    }
+    catch (int e)
+    {
+        cout<<"Hi "<<e<<endl;
+        throw 99;
+    }
+}
+
+void fun1(int x)
+{
+    try{
+        fun2(x);
+    }
+    catch (int e)
+    {
+        cout<<"hey "<<e<<endl;
+    }
+    
+    
+}
+
+
+int main()
+{
+    fun1(12);
+    return 0;
 }
