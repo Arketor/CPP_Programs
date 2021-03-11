@@ -1,0 +1,8 @@
+SOLID Design Principles
+
+S - Single Responsibility Principle - Every class should do only one task
+O - Open Closed Principle - Open for extension and closed for modification. 
+    Think of a class and in that we should not change any function but inherited class can extend the behavior by adding new functions
+L - Liskov Substitution Principle
+I - Interface Segregation Principle - Similar to Single Responsibility Principle. Here every interface should different puropose
+D - Dependency Inversion Principle
