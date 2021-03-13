@@ -74,3 +74,50 @@ int main()
     fun1(12);
     return 0;
 }
+
+
+
+
+
+3rd Program
+
+#include<iostream>
+using namespace std;
+
+void fun3(const string& newsfeed)
+{
+    try{
+        if(newsfeed=="FRC")
+        throw newsfeed;
+    }
+    catch (const string& e)
+    {
+        cout<<"Hi "<<e<<endl;
+        throw 99;
+    }
+}
+
+void fun2(const string& newsfeed)
+{
+    fun3(newsfeed);
+}
+void fun1(const string& x)
+{
+    try{
+        fun2(x);
+    }
+    catch (int e)
+    {
+        cout<<"hey "<<e<<endl;
+    }
+    
+    
+}
+
+
+int main()
+{
+    const string& a="FRC";
+    fun1(a);
+    return 0;
+}
