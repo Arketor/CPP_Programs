@@ -44,7 +44,7 @@ class abc
    
    
 
-Sample Code : 
+Sample Code 1: 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -91,3 +91,73 @@ int main()
    
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sample Code 2:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class abc
+{
+    int a,b,*c;
+    public:
+    abc()
+    {
+        a=0;
+        b=0;
+        c=new int(0);
+    }
+    abc(int x,int y,int z)
+    {
+        a=x;
+        b=y;
+        c=new int(z);
+    }
+    void show();
+    ~abc()
+    {
+        cout<<"Destructor\n";
+        delete c;
+    }
+};
+
+void abc::show()
+{
+    cout<<this->a<<" "<<this->b<<" "<<*(this->c)<<"\n";
+}
+
+int main()
+{
+    abc o1;
+    o1.show();
+    abc o2(4,2,12);
+    o2.show();
+    abc o3=abc(3,21,222);
+    o3.show();
+    abc *o4=new abc(311,121,222);
+    o4->show();
+    delete o4;
+}
