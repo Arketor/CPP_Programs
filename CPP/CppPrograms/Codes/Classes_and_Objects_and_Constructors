@@ -14,7 +14,101 @@ class abc
 1. Class members are Private by default whereas in Struct they are Public
 2. Constructor is always declared in Public Section
 3. If no constructor is made by us, then Compiler will create two constructors: Default Constructor and Copy Constructor
+
+eg : In below example we didnt create any constructor but compiler created default for us. So the below program will compile fine.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class abc
+{
+	public:
+		void show()
+		{
+			cout<<"asd "<<k<<endl;
+		}
+	private:
+		int k;
+};
+
+int main()
+{
+	abc o1;
+	o1.show();
+	return 0;
+}
+
+
+
 4. If we make any constructor then Compiler will not make default constructor for us
+
+   But that doesnt mean we have to create default constructor necessarily. So in this case
+   
+	a) If we create any object without any parameter (which means it will search for deafult constructor which is not present in this case) 
+	   then it will be a compilation error, even though other objects might have paramaters. So even if there is only 1 object with no parameters,
+	   then it will be a compilation error.
+	   
+	   eg : 
+	   #include<bits/stdc++.h>
+	   using namespace std;
+
+	   class abc
+	   {
+	    public:
+		
+		abc(int a)
+		{
+			k=a;
+		}
+		void show()
+		{
+			cout<<"asd "<<k<<endl;
+		}
+	    private:
+		int k;
+	   };
+
+	int main()
+	{
+		abc o1(111);
+		abc o2; // compilation error on this line
+		o1.show();
+		o2.show();
+		return 0;
+	}
+	   
+	b) If all objects have atleast 1 parameter, then it will not throw any compilation error.
+	
+	   eg : Below program runs fine without any compilation error.
+	   
+	   #include<bits/stdc++.h>
+	   using namespace std;
+
+           class abc
+           {
+	        public:
+                abc(int a)
+		{
+			k=a;
+		}
+		void show()
+		{
+			cout<<"asd "<<k<<endl;
+		}
+	        private:
+		int k;
+           };
+
+           int main()
+           {
+           	abc o1(111);
+           	o1.show();
+           	return 0;
+           }
+
+
+
+
 5. If we make any constructor but not a copy constructor, then only copy constructor will be made by Compiler.
 6. If we make Copy Constructor then no constructor will be made by Compiler
 7. Examples showing different ways to define a constructor:
