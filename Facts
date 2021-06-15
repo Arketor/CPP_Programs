@@ -17,8 +17,7 @@
   
  
  
-2.  a) abc fun(const abc &o) = const is used so that no modifications are done to object. We used reference to avoid creating extra object
-       so we save memory as well as a call to a copy constructor.
-    b) https://www.geeksforgeeks.org/copy-constructor-argument-const/?ref=rp
+2.  a) abc fun(const abc &o) = We used reference to avoid creating extra object so we save memory as well as a call to a copy constructor.
+    b) const is used so that no modifications are done to object and also for this reason : https://www.geeksforgeeks.org/copy-constructor-argument-const/?ref=rp
     
     
