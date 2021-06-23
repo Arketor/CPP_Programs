@@ -21,4 +21,4 @@
     b) const is used so that no modifications are done to object and also for this reason : https://www.geeksforgeeks.org/copy-constructor-argument-const/?ref=rp
     
     
-3.  Dont use try catch in Testing (Unit Testing), i.e dont catch exceptions in Unit Tests, because if we use it tests will not fail where they should fail.
+3.  Dont use try catch in Testing (Unit Testing), i.e dont catch exceptions in Unit Tests, because if we use it, tests will not fail where they should fail.
