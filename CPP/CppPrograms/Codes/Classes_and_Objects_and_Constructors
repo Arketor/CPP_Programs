@@ -139,7 +139,15 @@ int main()
    abc o8 =abc(1,2);        // Double Argument
    abc *o9 =new abc(1,21);  // Not an object but a pointer to an object of type abc
    
-   
+9. can someone pls tell whether pure virtual constructors exist?? and if yes then what is its utility : no constructors can't be virtual in c++.
+Because when a class have atleast one virtual function it needs to have vvptr which points to vtable. this linking code is written in default constructor , which runs first as soon as object is made
+If cons is virtual then this coding will not run
+
+10. Then What is the use of making the destructor pure virtual? : Pure virtual destructor is useful when you want to make a class abstract and you don't have any other method in the base class or you have but you don't want to force the derived classes to override those so you won't make them pure virtual.
+
+Then simply make the destructor pure virtual.
+
+
 
 Sample Code 1: 
 
