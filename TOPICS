@@ -1,10 +1,10 @@
 Pointers and References
 Static and Const Keywords
 Functions
-Classes and Objects and Constructors
+Classes and Objects and Constructors, Copy Constructors, Destructors, Operator Overloading, Friend Functions
 Inheritence
-Virtual Functions
-Templates and Shared Pointers
+Virtual Functions, Vptr, Vtable
+Templates, Smart Pointers, and Implementation of Shared Pointers
 Exception Handling
 Multithreading
 Libraries - Static and Dynamic
