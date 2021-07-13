@@ -3,7 +3,7 @@ Static and Const Keywords
 Functions
 Classes and Objects and Constructors, Copy Constructors, Destructors, Operator Overloading, Friend Functions
 Inheritence
-Virtual Functions, Vptr, Vtable
+Virtual Functions, Vptr, Vtable, Virtual Destructor
 Templates, Smart Pointers, and Implementation of Shared Pointers
 Exception Handling
 Multithreading
