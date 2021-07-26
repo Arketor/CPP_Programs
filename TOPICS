@@ -1,10 +1,19 @@
-Pointers, References, https://www.geeksforgeeks.org/return-by-reference-in-c-with-examples/, https://stackoverflow.com/questions/7456778/function-in-c-returns-by-value-or-by-reference, https://www.geeksforgeeks.org/c-11-vs-c-14-vs-c-17/
+Pointers
+Wild Pointers
+Dangling Pointers
+Memory leak
+References
+https://www.geeksforgeeks.org/return-by-reference-in-c-with-examples/
+https://stackoverflow.com/questions/7456778/function-in-c-returns-by-value-or-by-reference
+https://www.geeksforgeeks.org/c-11-vs-c-14-vs-c-17/
 Static and Const Keywords
 Functions
+Inline Functions
 Classes, Objects, Constructors, Destructors, Copy Constructors, Operator Overloading, Friend Functions
 Inheritence
 Virtual Functions, Vptr, Vtable, Virtual Destructor
 Templates, Smart Pointers, and Implementation of Shared Pointers
+Object Slicing
 Exception Handling
 Multithreading
 Libraries - Static and Dynamic
