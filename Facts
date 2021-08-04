@@ -22,3 +22,6 @@
     
     
 3.  Dont use try catch in Testing (Unit Testing), i.e dont catch exceptions in Unit Tests, because if we use it, tests will not fail where they should fail.
+
+4.  Friends Functions can be use to access any(Private also) members of the class in which they are declared as friend. Return type and parameters can be objects
+    of other class also.
