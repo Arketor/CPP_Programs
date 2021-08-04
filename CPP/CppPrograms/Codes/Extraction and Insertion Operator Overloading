@@ -1,0 +1,117 @@
+#include<bits/stdc++.h>
+using namespace std;
+class abc
+{
+    int x,y,*z;
+    public:
+    abc():x(0),y(0),z(new int(0)){cout<<"Default C is called\n";}
+    abc(int &,int &,int &);
+    abc(const abc &o)
+    {
+        cout<<"Copy C is called\n";
+        x=o.x;
+        y=o.y;
+        z=new int(*o.z);
+    }
+    friend abc operator+(abc, abc);
+    friend ostream& operator<<(ostream&, abc);
+    friend istream& operator>>(istream&, abc&);
+    void operator=(const abc &o)
+    {
+        cout<<"Assignment Operator is called\n";
+        x=o.x;
+        y=o.y;
+        z=new int(*o.z);
+    }
+    friend void showclass(abc);
+    ~abc() 
+    {
+        cout<<"D is called whose x, y and z are : "<<x<<" "<<y<<" "<<*z<<"\n";
+        delete(z);
+    }
+    void show();
+};
+abc::abc(int &a,int &b,int &c)
+    {
+        cout<<"Parameterised C is called\n";
+        x=a;
+        y=b;
+        z=new int(c);
+    }
+void showclass(abc o)
+{
+    cout<<"Using Friend Function showclass "<<o.x<<" "<<o.y<<" "<<*o.z<<"\n";
+}
+
+ostream& operator<<(ostream &cout2, abc o)
+{
+    cout<<"Using Friend Function operator << \n";
+    cout2<<o.x<<" "<<o.y<<" "<<o.z<<" "<<*o.z<<"\n";
+    return cout2;
+}
+istream& operator>>(istream &cin2, abc &o)
+{
+    cout<<"Using Friend Function operator >> \n";
+    cin2>>o.x>>o.y>>*o.z;
+    return cin2;
+}
+
+abc operator+(abc o1, abc o2)
+{
+    cout<<"Using Friend Function operator + \n";
+    abc temp;
+    temp.x=o1.x+o2.x;
+    temp.y=o1.y+o2.y;
+    temp.z=new int(*o1.z+*o2.z);
+    return temp;
+}
+
+
+void abc::show()
+{
+    cout<<x<<" "<<y<<" "<<z<<" "<<*z<<"\n";
+}
+
+
+class cba: public abc
+{
+    int l,m,*n;
+    public:
+    cba()
+    {
+        cout<<"D Defualt C\n";
+        l=m=0;
+        n=new int(0);
+    }
+    cba(int a,int b, int c):l(a),m(b),n(new int(c)){cout<<"D Parameterised C\n";};
+};
+
+
+
+int main()
+{
+    /*abc o1;
+    abc o2(1,2,2);
+    abc o3=o2;
+    abc o4;
+    o4=o2; //o4.operator=(o2)
+    o1.show();
+    o2.show();
+    o3.show();
+    o4.show();
+    abc o5;
+    o5=o3+o4; //o3.operator+(o4) //friend : operator+(o3,o4)
+    o5.show();
+    abc o6=o3+o4; //o3.operator+(o4)
+    o6.show();
+    showclass(o6);
+    showclass(o5);
+    cout<<o5<<" "<<o6<<"\n";  //operator<<(cout,o5);
+    abc o7,o8;
+    cin>>o7>>o8;
+    o7.show();
+    o8.show();*/
+    cba oo1;
+    cba oo2(1,2,33333);
+    return 0;
+}
