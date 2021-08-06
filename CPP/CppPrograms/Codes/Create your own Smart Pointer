@@ -1,0 +1,76 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class abc
+{
+    int a,b;
+    public:
+
+    abc():a(0),b(0)
+    {
+        cout<<"Class Default C\n";
+    }
+    abc(int aa,int bb):a(aa),b(bb)
+    {
+        cout<<"Class Parameterised C\n";
+    }
+    void show()
+    {
+        cout<<"Show Function\n";
+        cout<<"a : "<<a<<"\n";
+        cout<<"b : "<<b<<"\n";
+    }
+    friend ostream& operator <<(ostream &out, abc &o)
+    {
+        out<<"Helllo\n";
+        out<<"a : "<<o.a<<"\n";
+        out<<"a : "<<o.b<<"\n";
+        return out;
+    }
+    ~abc()
+    {
+        cout<<"Class Destructor\n";
+    }
+};
+
+template<typename T>
+class smart_p
+{
+    T *k;
+    public:
+    smart_p()
+    {
+        cout<<"SP Default C\n";
+    }
+    smart_p(T *x)
+    {
+        cout<<"SP Parameterised C\n";
+        k=x;
+    }
+
+    T& operator *()
+    {
+        return *k;
+    }    
+
+    T * operator ->()
+    {
+        return k;
+    }
+
+    ~smart_p()
+    {
+        cout<<"SP Destructor\n";
+        delete k;
+    }
+};
+
+
+
+int main()
+{
+    smart_p<abc> p=new abc(1,2);
+    cout<<*p<<"\n";
+    p->show();
+    return 0;
+}
