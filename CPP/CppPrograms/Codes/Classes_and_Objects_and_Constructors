@@ -133,7 +133,8 @@ int main()
    			    // Also we can write this line as : 
 			    				abc *aa=new abc();
    abc o4(4);               // Single Argument
-   abc o5=4;                // Single Argument     This type is only for constructors with single argument
+   abc o5=4;                // Single Argument     This type is only for constructors with single argument. It is called Conversion Constructor. 
+                            //                     It is used in type conversion.
    abc o6=abc(4);           // Single Argument
    abc o7(1,2);             // Double Argument
    abc o8 =abc(1,2);        // Double Argument
