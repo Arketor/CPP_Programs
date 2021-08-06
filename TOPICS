@@ -13,12 +13,15 @@ Classes, Objects, Constructors, Destructors, Copy Constructors, Operator Overloa
 Inheritence
 Virtual Functions, Vptr, Vtable, Virtual Destructor
 Templates, Smart Pointers, and Implementation of Shared Pointers
+Class type to Primitive type Conversion and vice versa. (Casting operator)
 Object Slicing
 Exception Handling
+STL (Vectors, stl find, Set, Unordered Set, Map, Unordered Map, Iterators, Auto keyword) 
 Multithreading
 Libraries - Static and Dynamic
 Design Principles - SOLID
 Design Patterns
+Low Level Design Questions
 CPPCMS Framework
 GDB
 
