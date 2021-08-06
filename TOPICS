@@ -12,10 +12,11 @@ Inline Functions
 Classes, Objects, Constructors, Destructors, Copy Constructors, Operator Overloading, Friend Functions
 Inheritence
 Virtual Functions, Vptr, Vtable, Virtual Destructor
-Templates, Smart Pointers, and Implementation of Shared Pointers
+Templates, Smart Pointers, and Implementation of Smart Pointers
 Class type to Primitive type Conversion and vice versa. (Casting operator)
 Object Slicing
 Exception Handling
+Explicit Keyword
 STL (Vectors, stl find, Set, Unordered Set, Map, Unordered Map, Iterators, Auto keyword) 
 Multithreading
 Libraries - Static and Dynamic
