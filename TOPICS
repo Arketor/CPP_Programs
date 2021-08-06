@@ -15,6 +15,7 @@ Virtual Functions, Vptr, Vtable, Virtual Destructor
 Templates, Smart Pointers, and Implementation of Smart Pointers
 Class type to Primitive type Conversion and vice versa. (Casting operator)
 Object Slicing
+How to prevent Object Copying
 Exception Handling
 Explicit Keyword
 STL (Vectors, stl find, Set, Unordered Set, Map, Unordered Map, Iterators, Auto keyword) 
