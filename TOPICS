@@ -16,7 +16,7 @@ Templates, Smart Pointers, and Implementation of Smart Pointers
 Class type to Primitive type Conversion and vice versa. (Casting operator)
 Object Slicing
 How to prevent Object Copying
-Exception Handling
+Exception Handling, Create your own exceptions for a class
 Explicit Keyword
 STL (Vectors, stl find, Set, Unordered Set, Map, Unordered Map, Iterators, Auto keyword) 
 Multithreading
