@@ -2,7 +2,7 @@ Pointers
 Wild Pointers
 Dangling Pointers
 Memory leak
-References
+References, See questions 1 to 6 from here : https://www.geeksforgeeks.org/references-in-c/
 https://www.geeksforgeeks.org/return-by-reference-in-c-with-examples/
 https://stackoverflow.com/questions/7456778/function-in-c-returns-by-value-or-by-reference
 https://www.geeksforgeeks.org/c-11-vs-c-14-vs-c-17/
