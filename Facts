@@ -25,3 +25,5 @@
 
 4.  Friends Functions can be use to access any(Private also) members of the class in which they are declared as friend. Return type and parameters can be objects
     of other class also.
+    
+5.  vptr is instance member variable which means for every object there will be different vptr. vtable is static member(its a static array) of a class.
