@@ -22,7 +22,7 @@ STL (Vectors, stl find, Set, Unordered Set, Map, Unordered Map, Iterators, Auto 
 Multithreading
 Libraries - Static and Dynamic
 Design Principles - SOLID
-Design Patterns
+Design Patterns - Singleton, Factory
 Low Level Design Questions
 CPPCMS Framework
 GDB
