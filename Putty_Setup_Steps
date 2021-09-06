@@ -1,0 +1,27 @@
+Step 1, Generate the Key
+run PuTTYgen
+move your mouse around to give it "randomness"
+wait for it to generate the key
+Step 2, Save the Private Key
+click the "Save private key" button
+Yes, save it with a strong passphrase
+remember where you put this (My Documents\private.ppk is a good place).
+you should probably make the file read-only, and readable only by you
+Step 3, Add the Public Key to unix
+DO NOT use the "Save public key" button!! It will save the file in the wrong format.
+Copy the Key Text displayed in "Public key for pasting into OpenSSH authorized_keys file"
+log in to unix
+mkdir -p ~/.ssh
+cd ~/.ssh
+vim authorized_keys
+paste the text here and save the file (don't introduce any newlines - this key should go on a single line)
+Step 4, set up PuTTY to use the key
+in PuTTY Configuration
+under: Connection -> SSH -> Auth
+Click the "Browse..." button next to "Private key file for authentication"
+browse to your Private Key file from Step 2
+under: Connection -> Data
+type your username in the "Auto-login username" box
+under: Session
+Save your Configuration Session, so you don't have to do this again
+You should now be able to run PuTTY and connect to a linux machine without being prompted for a password. You can use a similar trick to be able to ssh between different linux boxes
