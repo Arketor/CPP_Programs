@@ -8,6 +8,7 @@ https://www.geeksforgeeks.org/return-by-reference-in-c-with-examples/
 https://stackoverflow.com/questions/7456778/function-in-c-returns-by-value-or-by-reference
 https://www.geeksforgeeks.org/c-11-vs-c-14-vs-c-17/
 Static and Const Keywords
+Static Variables/Members get memory when Program is loaded
 Functions
 Inline Functions
 Classes, Objects, Constructors, Destructors, Copy Constructors, Operator Overloading, Friend Functions
