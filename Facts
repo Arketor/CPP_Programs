@@ -27,3 +27,9 @@
     of other class also.
     
 5.  vptr is instance member variable which means for every object there will be different vptr. vtable is static member(its a static array) of a class.
+
+
+
+
+
+asdd
