@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+class abc
+{
+    int a,b;
+    public:
+    abc()
+    {
+
+    }
+    abc(int x, int y)
+    {
+        a = x;
+        b = y;
+    }
+
+    abc operator -()
+    {
+        abc t;
+        t.a = -a;
+        t.b = -b;
+        return t;
+    }
+
+    abc operator -(abc k)
+    {
+        abc t;
+        t.a = a - k.a;
+        t.b = b - k.b;
+        return t;
+    }
+
+    abc operator ++()
+    {
+        abc temp;
+        temp.a = ++a;
+        temp.b = ++b;
+        
+        return temp;
+    }
+
+    abc operator ++(int)
+    {
+        abc temp;
+        temp.a = a++;
+        temp.b = b++;
+        
+        return temp;
+    }
+
+    void show()
+    {
+        cout << a << " " << b << "\n";
+    }
+};
+int main()
+{
+    abc o1(1,2),o2(3,14);
+    abc o3 = -o1; // abc o3 = o1.operator-()
+    o3.show();
+    o3 = o2 - o1; // o3 = o2.operator-(o1)
+    o3.show();
+    abc o4;
+    o4 = o1++; // o1.operator++()
+    o1.show();
+    o4.show();
+    o4 = ++o2; // o1.operator++()
+    o2.show();
+    o4.show();
+    return 0;
+}
