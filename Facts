@@ -27,3 +27,6 @@
     of other class also.
     
 5.  vptr is instance member variable which means for every object there will be different vptr. vtable is static member(its a static array) of a class.
+
+6. Base class pointer can point to child class objects but child class pointer can't point to base class objects. Also Base class pointer can point to child class' child class
+objects (i.e all descendent classes i.e child's child's child's child class object can be pointed by base class pointer). That is, this will be applicable for Multilevel inheritence. 
