@@ -35,10 +35,12 @@ Programming Practice Questions
 
 N Queen Problem
 Permutations of a string
-Stack
+Stack : Next Greater Element, Rectangle in Histogram
 Queue
 Binary Search Tree Implementation
 AVL Tree
+LinkedList : Cycle in LinkedList
+LRU Cache
 Heap
 Segment Tree
 Segment Tree with Lazy Propagation
